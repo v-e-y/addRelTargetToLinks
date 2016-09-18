@@ -38,7 +38,7 @@ class AddNofollowToLinks {
                 if (this.host != link.hostname) {
                     link.setAttribute('target', '_blank');
                     // додати перевірку на інші можливі значення
-                    if (link.attributes.rel.nodeValue == 'nofollow') {
+                    if (link.attributes.rel && link.attributes.rel.nodeValue == 'nofollow') {
                         link.setAttribute('role', 'nofollow noopener');
                     } else {
                         link.setAttribute('role', 'noopener');
