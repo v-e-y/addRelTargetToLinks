@@ -22,8 +22,7 @@ class AddNofollowToLinks {
                     link.setAttribute('target', '_blank');
                     if (link.attributes.rel && link.attributes.rel.nodeValue == 'nofollow') {
                         link.setAttribute('role', 'nofollow noopener');
-                    }
-                    else {
+                    } else {
                         link.setAttribute('role', 'noopener');
                     }
                 }
