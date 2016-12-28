@@ -6,12 +6,12 @@
 class AddNofollowToLinks {
     pageLinks: HTMLCollection;
     pageLinksCount: number;
-    // role: boolean;
+    // rel: boolean;
     // target: boolean;
     host: string;
 
     // pageLinks: HTMLCollection, host: string, pageLinksCount: number, 
-    // target: boolean, role: boolean
+    // target: boolean, rel: boolean
     constructor() {
         // All links in page
         this.pageLinks = document.links;
@@ -24,7 +24,7 @@ class AddNofollowToLinks {
         // this.target = !target ? true : target;
     }
 
-    // Add 'role="nofollow"' to link, exemple: <a href="http://www.exemple.com/some-url" title="Some page" rel="nofollow">some link</a>
+    // Add 'rel="nofollow"' to link, exemple: <a href="http://www.exemple.com/some-url" title="Some page" rel="nofollow">some link</a>
     addNoFollow() {
         if (this.pageLinksCount > 1) {
             for (let i = 0; i < this.pageLinksCount; i++) {
