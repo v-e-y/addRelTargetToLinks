@@ -9,7 +9,7 @@ class AddNofollowToLinks {
             for (let i = 0; i < this.pageLinksCount; i++) {
                 let link = this.pageLinks[i];
                 if (this.host != link.hostname) {
-                    link.setAttribute('role', 'nofollow');
+                    link.setAttribute('rel', 'nofollow');
                 }
             }
         }
@@ -21,9 +21,9 @@ class AddNofollowToLinks {
                 if (this.host != link.hostname) {
                     link.setAttribute('target', '_blank');
                     if (link.attributes.rel && link.attributes.rel.nodeValue == 'nofollow') {
-                        link.setAttribute('role', 'nofollow noopener');
+                        link.setAttribute('rel', 'nofollow noopener');
                     } else {
-                        link.setAttribute('role', 'noopener');
+                        link.setAttribute('rel', 'noopener');
                     }
                 }
             }
@@ -35,7 +35,7 @@ class AddNofollowToLinks {
                 let link = this.pageLinks[i];
                 if (this.host != link.hostname) {
                     link.setAttribute('target', '_blank');
-                    link.setAttribute('role', 'nofollow noopener');
+                    link.setAttribute('rel', 'nofollow noopener');
                 }
             }
         }
