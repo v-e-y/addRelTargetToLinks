@@ -20,7 +20,7 @@ class AddNofollowToLinks {
         // Hostname in page
         this.host = window.location.hostname;
 
-        // this.role = !rel ? true : rel;
+        // this.rel = !rel ? true : rel;
         // this.target = !target ? true : target;
     }
 
